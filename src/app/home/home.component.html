@@ -1,0 +1,17 @@
+<p>{{price | number:'1.2-3'}}</p>
+<p>{{currentDate | date :'dd/MM/y'}}</p>
+
+
+<p *ngIf="showText">
+  home works! {{name|test}}
+</p>
+<a class="btn" (click)="toggleShow()" [ngClass]="{active:showText}">Toggle</a>
+<ul>
+  <li *ngFor="let i of [1,2,3,4]">{{i}}</li>
+</ul>
+
+<div [ngSwitch]="conditionExpression">
+  <ng-template [ngSwitchCase]="case1Exp">One</ng-template>
+  <ng-template ngSwitchCase="case2LiteralString">Two</ng-template>
+  <ng-template ngSwitchDefault>Three</ng-template>
+</div>

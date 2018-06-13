@@ -1,0 +1,11 @@
+<nav>
+  <div class="nav-wrapper">
+    <a (click)="goToPage('home')" class="brand-logo">Logo</a>
+    <ul id="nav-mobile" class="right hide-on-med-and-down">
+      <li><a class="btn teal lighten-2" (click)="goToPage('login')">Login</a></li>
+      <li><a class="btn teal lighten-2" (click)="goToPage('admin/domo-list')">List Data</a></li>
+      <li><a class="btn teal lighten-2" (click)="goToPage('admin/demo-form')">Add Demo Data</a></li>
+    </ul>
+  </div>
+</nav>
+<router-outlet></router-outlet>

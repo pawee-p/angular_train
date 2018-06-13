@@ -1,0 +1,43 @@
+<form #loginForm="ngForm"  (ngSubmit)="onSubmit(loginForm)">
+  <input type="text"  ngModel name="userId" required
+        >
+  <input type="password" [(ngModel)] = "password"  name="password"   required>
+  <button type="submit" >Login</button>
+</form>
+
+<div>
+  {{ loginForm.value | json}}
+  {{ loginForm.valid}}
+</div>
+
+<button class="btn" (click)="testData()">Test Data</button>&nbsp;&nbsp;
+<button class="btn" (click)="onGoogleSignIn()">Sign in With Google</button>&nbsp;&nbsp;
+<button class="btn" (click)="onFacebookSignIn()">Sign in With Facebook</button>&nbsp;&nbsp;
+<button class="btn" (click)="onGithubSignIn()">Sign in With GitHub</button>
+
+
+<div class="row">
+  <input type="text" [(ngModel)] = "phoneNumber" />
+</div>
+<div id="recapt-id"></div>
+<button class=btn (click)="onRequestOtp()">Request OTP</button>
+
+<input type="text" [(ngModel)] = "otp" >
+
+<!-- <p>
+  login works!
+</p>
+<input type="text" [(ngModel)]="userId">
+
+
+<input type="password" [(ngModel)]="password">
+
+<p>
+  {{userId}} : {{password}}
+</p>
+
+<a class="btn" (click)="testData()">Test Data</a>
+
+
+<app-home (toggle)="onToggle($event)"></app-home> -->
+
