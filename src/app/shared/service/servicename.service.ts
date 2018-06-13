@@ -14,7 +14,7 @@ export class ServicenameService {
 
    loadProject(): Observable<any[]> {
 
-     return this._http.get(`${environment.API_URL}/api/v1/project`).pipe( map( (resp) => {
+     return this._http.get(`${environment.API_URL}/api/v1/project`).pipe(map((resp) => {
        return resp.json();
      } ) ).pipe(  catchError( value => Observable.throw(value))  );
    }
@@ -25,7 +25,7 @@ export class ServicenameService {
          'userCode' : user.userId,
          'userPwd' : user.password
        };
-       return this._http.post(`${environment.API_URL}/api/v1/login/doLogin`, body).pipe( map((resp) => {
+       return this._http.post(`${environment.API_URL}/api/v1/login/doLogin`, body).pipe(map((resp) => {
         return resp.json();
        }));
    }
